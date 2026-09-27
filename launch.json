@@ -1,0 +1,25 @@
+{
+  "kind": "univ4_hook",
+  "hook": {
+    "contract": "SwapReceiptHook",
+    "constructorArgs": [
+      "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"
+    ],
+    "permissions": [
+      "afterSwap"
+    ]
+  },
+  "token": {
+    "contract": "RCPT",
+    "name": "Receipts",
+    "symbol": "RCPT",
+    "decimals": 18
+  },
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "79299443975792720780679863727831"
+  },
+  "notes": "Technical description of src/SwapReceiptHook.sol and src/RCPT.sol, with ABI exports at docs/abi/SwapReceiptHook.json and docs/abi/RCPT.json. The hook's sole constructor argument is the approved Sepolia PoolManager; RCPT has no constructor arguments. The intended pool has native ETH as currency0, RCPT as currency1 and SwapReceiptHook as its hook. initialPrice is decimal sqrtPriceX96, equal to TickMath.getSqrtPriceAtTick(138180), matching script/LaunchConfig.sol and the one-sided RCPT launch rehearsal in test/LaunchRehearsal.t.sol. Only afterSwap is enabled; all other permissions, including return-delta permissions, are false. The constructor validates hook address bits, requiring a CREATE2 address whose low 14 bits equal 0x0040. Initialization and liquidity changes have no enabled callbacks. afterSwap requires the configured PoolManager and returns zero delta without charging a hook fee. Qualifying zeroForOne buys with at least 0.001 ETH actually settled mint one soulbound ERC-721 receipt, using settled deltas for exact-input, exact-output and partial fills. The collection is Swap Receipts (SWAPRCPT). Receipt ids start at 1; records contain ETH paid, tokens received, currency1, block number and timestamp, with a Receipt event carrying poolId. Crediting requires exactly 32 bytes of hookData encoding a nonzero address with clean upper bits; invalid data credits nobody and there is no router-sender fallback. hookData is unauthenticated: anyone can credit any address through a qualifying buy, so a receipt does not prove its recipient traded. Sells, smaller buys and non-native-ETH pools mint nothing. Other native-ETH pools record their own currency1. Minting uses _mint without a recipient callback; transfers and approvals revert and there is no burn. Views provide totalMinted, receiptOf, receiptsOf and on-chain base64 JSON/SVG tokenURI. There are no administrative or upgrade entry points. This manifest does not set deployment policy or certify independent review, attestation, admission or deployment; policy and signed artifact linkage are handled separately by services."
+}
