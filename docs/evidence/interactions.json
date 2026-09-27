@@ -1,0 +1,142 @@
+{
+  "testedAt": "2026-09-27T07:15:04.851Z",
+  "export": "dist/ served under /preview/",
+  "browser": "141.0.7390.37",
+  "liveTransactions": false,
+  "checks": [
+    {
+      "name": "Missing browser wallet produces an actionable error",
+      "result": "PASS"
+    },
+    {
+      "name": "Wallet connection rejection is recoverable",
+      "result": "PASS"
+    },
+    {
+      "name": "Wrong chain blocks trading; 4902 adds exact handoff chain and switches again",
+      "result": "PASS"
+    },
+    {
+      "name": "Public RPC fallback recovers after the first endpoint fails",
+      "result": "PASS"
+    },
+    {
+      "name": "Live StateView reads use the derived pool ID; latest 12 use Receipt events and exclude other tokens/pools",
+      "result": "PASS"
+    },
+    {
+      "name": "Wallet gallery paginates receiptsOf, filters token addresses and renders tokenURI SVG images",
+      "result": "PASS"
+    },
+    {
+      "name": "Pasted-address gallery and inline address validation work",
+      "result": "PASS"
+    },
+    {
+      "name": "Sub-micro-unit quoted amounts remain visible instead of rounding to zero",
+      "result": "PASS"
+    },
+    {
+      "name": "Buy review validates input, uses configured quoter/router, ETH value, negative exact-input and wallet hookData; no signing during quote",
+      "result": "PASS"
+    },
+    {
+      "name": "Rejected swap shows recovery and never fabricates confirmation",
+      "result": "PASS"
+    },
+    {
+      "name": "Simulation revert blocks signing and displays the failure",
+      "result": "PASS"
+    },
+    {
+      "name": "Partial fill shows actual simulated input and below-threshold receipt warning",
+      "result": "PASS"
+    },
+    {
+      "name": "Buy simulates again before mocked signing, waits for receipt and links the transaction",
+      "result": "PASS"
+    },
+    {
+      "name": "Sell requires separate exact-amount approval to PoolSwapTest, then simulation and zero-value swap",
+      "result": "PASS"
+    },
+    {
+      "name": "Expired review cannot be signed",
+      "result": "PASS"
+    },
+    {
+      "name": "Account change discards the previous trade review",
+      "result": "PASS"
+    },
+    {
+      "name": "Automated accessibility: no WCAG A/AA violations in populated trade/receipt state",
+      "result": "PASS"
+    },
+    {
+      "name": "No horizontal overflow at 1440 CSS pixels",
+      "result": "PASS"
+    },
+    {
+      "name": "No horizontal overflow at 768 CSS pixels",
+      "result": "PASS"
+    },
+    {
+      "name": "No horizontal overflow at 390 CSS pixels",
+      "result": "PASS"
+    },
+    {
+      "name": "No horizontal overflow at 320 CSS pixels",
+      "result": "PASS"
+    },
+    {
+      "name": "200% root text enlargement reflows at 768px (not browser-native zoom)",
+      "result": "PASS"
+    },
+    {
+      "name": "Keyboard skip link, native form controls and visible focus captured",
+      "result": "PASS"
+    },
+    {
+      "name": "Keyboard Enter reviews the swap and Space activates mocked confirmation",
+      "result": "PASS"
+    },
+    {
+      "name": "Missing deployed code keeps transaction controls disabled",
+      "result": "PASS"
+    },
+    {
+      "name": "Tampered ABI fails closed before the trading UI opens",
+      "result": "PASS"
+    },
+    {
+      "name": "Production gateway-subpath export loads with no JavaScript errors or missing local resources",
+      "result": "PASS"
+    }
+  ],
+  "screenshots": [
+    "desktop-review.jpg",
+    "mobile-390.jpg",
+    "mobile-320.jpg",
+    "keyboard-focus.jpg"
+  ],
+  "consoleErrors": [],
+  "resourceFailures": [],
+  "computed": {
+    "body": {
+      "color": "rgb(35, 38, 33)",
+      "background": "rgb(244, 243, 236)",
+      "font": "Arial, \"Helvetica Neue\", sans-serif"
+    },
+    "primary": {
+      "color": "rgb(35, 38, 33)",
+      "background": "rgb(215, 244, 91)"
+    },
+    "muted": {
+      "color": "rgb(98, 102, 89)"
+    },
+    "focus": {
+      "outline": "rgb(35, 38, 33) none 0px"
+    }
+  },
+  "result": "PASS"
+}

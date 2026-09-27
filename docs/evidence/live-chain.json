@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-09-27T07:02:16.654Z",
+  "broadcast": false,
+  "poolId": "0x2f10fdd1fd805a223716415a26e9778c9a8d83343ce7ff72066094b03a38072f",
+  "rpc": [
+    {
+      "url": "https://ethereum-sepolia-rpc.publicnode.com",
+      "chainId": 11155111,
+      "block": "11791706",
+      "codeBytes": {
+        "RCPT": 2456,
+        "SwapReceiptHook": 13311,
+        "PoolSwapTest": 6950,
+        "PoolManager": 24009,
+        "StateView": 3531,
+        "Quoter": 5820
+      },
+      "routerManager": "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543",
+      "hookManager": "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543",
+      "slot0": [
+        "560227709747861399187319382274582",
+        "177284",
+        "0",
+        "3000"
+      ],
+      "totalMinted": "0",
+      "result": "PASS"
+    }
+  ]
+}

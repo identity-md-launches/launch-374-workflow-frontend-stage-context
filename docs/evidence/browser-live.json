@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-09-27T07:15:20.677Z",
+  "browser": "141.0.7390.37",
+  "walletConnected": false,
+  "mocked": false,
+  "consoleErrors": [],
+  "failedRequests": [],
+  "screenshots": [
+    "live-desktop.jpg",
+    "live-full-page.jpg",
+    "live-mobile.jpg"
+  ],
+  "status": "Updated at block 11,791,771\nRefreshes every 30 seconds\n↻",
+  "stats": "POOL PRICE\n50,000,000 RCPT\nper 1 ETH · StateView spot price\nRECEIPTS MINTED\n0 all pools\nThis hook’s lifetime collection\nQUALIFYING BUY\n0.001 ETH\nSettled amount, excluding gas\nUpdated at block 11,791,771\nRefreshes every 30 seconds\n↻",
+  "colors": [
+    {
+      "selector": "h1",
+      "backgroundSelector": "body",
+      "foreground": "rgb(35, 38, 33)",
+      "background": "rgb(244, 243, 236)",
+      "contrast": 13.77
+    },
+    {
+      "selector": ".intro",
+      "backgroundSelector": "body",
+      "foreground": "rgb(98, 102, 89)",
+      "background": "rgb(244, 243, 236)",
+      "contrast": 5.3
+    },
+    {
+      "selector": ".field-hint",
+      "backgroundSelector": ".trade-card",
+      "foreground": "rgb(98, 102, 89)",
+      "background": "rgb(255, 254, 251)",
+      "contrast": 5.84
+    },
+    {
+      "selector": ".primary",
+      "backgroundSelector": ".primary",
+      "foreground": "rgb(35, 38, 33)",
+      "background": "rgb(215, 244, 91)",
+      "contrast": 12.39
+    },
+    {
+      "selector": ".sample-label",
+      "backgroundSelector": ".sample-receipt",
+      "foreground": "rgb(98, 102, 89)",
+      "background": "rgb(255, 254, 251)",
+      "contrast": 5.84
+    }
+  ],
+  "mobileOverflow": false,
+  "result": "PASS"
+}

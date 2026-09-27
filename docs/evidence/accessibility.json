@@ -1,0 +1,159 @@
+{
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": [
+        {
+          "target": [
+            ".network-badge > span[aria-hidden=\"true\"]"
+          ],
+          "html": "<span aria-hidden=\"true\">◉</span>",
+          "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+        },
+        {
+          "target": [
+            ".sample-top > span:nth-child(2)"
+          ],
+          "html": "<span>Swap receipts<br><small>Sepolia edition</small></span>",
+          "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".sample-top > span:nth-child(2) > small"
+          ],
+          "html": "<small>Sepolia edition</small>",
+          "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".sample-caption"
+          ],
+          "html": "<p class=\"sample-caption\">A swap worth keeping.</p>",
+          "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".sample-amount > span"
+          ],
+          "html": "<span>ETH</span>",
+          "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".sample-sub"
+          ],
+          "html": "<p class=\"sample-sub\">Minimum settled buy for a receipt</p>",
+          "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".sample-bottom > div > .eyebrow"
+          ],
+          "html": "<span class=\"eyebrow\">Made to stay</span>",
+          "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".sample-bottom > div > strong"
+          ],
+          "html": "<strong>Yours, forever.</strong>",
+          "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".receipt-stamp"
+          ],
+          "html": "<span class=\"receipt-stamp\">On<br>chain</span>",
+          "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".sample-label"
+          ],
+          "html": "<span class=\"sample-label\">Illustration · actual artwork is stored on-chain</span>",
+          "summary": "Fix any of the following:\n  Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".icon-button"
+          ],
+          "html": "<button class=\"icon-button\" aria-label=\"Refresh live data\">↻</button>",
+          "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+        },
+        {
+          "target": [
+            ".swap-arrow"
+          ],
+          "html": "<div class=\"swap-arrow\" aria-hidden=\"true\">↓</div>",
+          "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+        },
+        {
+          "target": [
+            ".secondary > span[aria-hidden=\"true\"]"
+          ],
+          "html": "<span aria-hidden=\"true\">→</span>",
+          "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+        },
+        {
+          "target": [
+            ".input-row > button[type=\"submit\"] > span[aria-hidden=\"true\"]"
+          ],
+          "html": "<span aria-hidden=\"true\">→</span>",
+          "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+        },
+        {
+          "target": [
+            "aside > span[aria-hidden=\"true\"]"
+          ],
+          "html": "<span aria-hidden=\"true\">ⓘ</span>",
+          "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+        },
+        {
+          "target": [
+            ".section-heading > button > span[aria-hidden=\"true\"]"
+          ],
+          "html": "<span aria-hidden=\"true\">↻</span>",
+          "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+        }
+      ]
+    }
+  ],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "autocomplete-valid",
+    "avoid-inline-spacing",
+    "button-name",
+    "bypass",
+    "color-contrast",
+    "definition-list",
+    "dlitem",
+    "document-title",
+    "duplicate-id-aria",
+    "form-field-multiple-labels",
+    "html-has-lang",
+    "html-lang-valid",
+    "image-alt",
+    "label",
+    "link-in-text-block",
+    "link-name",
+    "list",
+    "listitem",
+    "meta-viewport",
+    "nested-interactive",
+    "role-img-alt",
+    "summary-name",
+    "target-size"
+  ]
+}

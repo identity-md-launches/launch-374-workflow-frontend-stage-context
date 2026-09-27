@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-09-27T07:15:47.560Z",
+  "rpc": "https://ethereum-sepolia-rpc.publicnode.com",
+  "broadcast": false,
+  "account": "0x000000000000000000000000000000000000dEaD",
+  "inputWei": "1000000000000000",
+  "priceToleranceBps": 50,
+  "quotedOutput": "49627085152468411915572",
+  "quoteResult": "PASS",
+  "simulatedInput": "1000000000000000",
+  "simulatedOutput": "49627085152468411915572",
+  "priceLimit": "558825385371394315652730043844932",
+  "routerSimulation": "PASS",
+  "result": "PASS"
+}

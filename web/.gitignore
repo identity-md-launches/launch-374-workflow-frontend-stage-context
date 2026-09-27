@@ -1,0 +1,10 @@
+# Explicit ignore-file path budget: web/.gitignore only.
+**/node_modules/
+**/.npm/
+**/.cache/
+**/.vite/
+**/coverage/
+**/test-results/
+**/playwright-report/
+**/*.tgz
+**/*.tsbuildinfo

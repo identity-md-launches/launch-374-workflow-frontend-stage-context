@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "sourceCommit": "51df4c55089f07ec549f8388c1f3d7a9aab5040e",
+  "deliveryCommit": "7588bb29f77ff682d3d86a610552540fec18dee0",
+  "workspaceCommitLimitation": ".git is read-only; delivery commit exported from isolated scratch repository",
+  "deliveryBundleBytes": 2480590,
+  "deliveryBundleSHA256": "c23246a4e72cdbe8c07e91ce9285928189f0cb6073fe293c0bf15e0170eddf2f",
+  "collectedBundleBytesBeforeThisReport": 4961457,
+  "extraReportAllowanceBytes": 65536,
+  "collectedBundleBytesConservativeUpperBound": 5026993,
+  "limitBytes": 8388608,
+  "rawFileBytesIncludingExistingSourceAndDeliveryBundleBeforeThisReport": 8153785,
+  "exportBytes": 553890,
+  "exportAssetCountExcludingManifest": 9,
+  "changedPathsInDeliveryCommit": 53,
+  "checks": [
+    "all changed paths under web/, dist/ or docs/",
+    "only web/.gitignore uses dotfile allowance",
+    "protected source and configuration unchanged",
+    "no submodules",
+    "no dependencies, caches or archives in Git",
+    "git bundle verify passes",
+    "complete collected bundle including nested transport bundle below limit"
+  ]
+}

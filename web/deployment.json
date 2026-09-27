@@ -1,0 +1,52 @@
+{
+  "chainId": 11155111,
+  "repoUrl": "https://github.com/identity-md-launches/launch-250-swapreceipthook",
+  "version": 1,
+  "launchId": "d6bd324d-f1b1-4394-b215-595c20425405",
+  "manifest": {
+    "hook": {
+      "contract": "SwapReceiptHook",
+      "permissions": [
+        "afterSwap"
+      ],
+      "constructorArgs": [
+        "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"
+      ]
+    },
+    "kind": "univ4_hook",
+    "pool": {
+      "fee": 3000,
+      "tickSpacing": 60,
+      "initialPrice": "79299443975792720780679863727831",
+      "pairedCurrency": "0x0000000000000000000000000000000000000000"
+    },
+    "notes": "Technical description of src/SwapReceiptHook.sol and src/RCPT.sol, with ABI exports at docs/abi/SwapReceiptHook.json and docs/abi/RCPT.json. The hook's sole constructor argument is the approved Sepolia PoolManager; RCPT has no constructor arguments. The intended pool has native ETH as currency0, RCPT as currency1 and SwapReceiptHook as its hook. initialPrice is decimal sqrtPriceX96, equal to TickMath.getSqrtPriceAtTick(138180), matching script/LaunchConfig.sol and the one-sided RCPT launch rehearsal in test/LaunchRehearsal.t.sol. Only afterSwap is enabled; all other permissions, including return-delta permissions, are false. The constructor validates hook address bits, requiring a CREATE2 address whose low 14 bits equal 0x0040. Initialization and liquidity changes have no enabled callbacks. afterSwap requires the configured PoolManager and returns zero delta without charging a hook fee. Qualifying zeroForOne buys with at least 0.001 ETH actually settled mint one soulbound ERC-721 receipt, using settled deltas for exact-input, exact-output and partial fills. The collection is Swap Receipts (SWAPRCPT). Receipt ids start at 1; records contain ETH paid, tokens received, currency1, block number and timestamp, with a Receipt event carrying poolId. Crediting requires exactly 32 bytes of hookData encoding a nonzero address with clean upper bits; invalid data credits nobody and there is no router-sender fallback. hookData is unauthenticated: anyone can credit any address through a qualifying buy, so a receipt does not prove its recipient traded. Sells, smaller buys and non-native-ETH pools mint nothing. Other native-ETH pools record their own currency1. Minting uses _mint without a recipient callback; transfers and approvals revert and there is no burn. Views provide totalMinted, receiptOf, receiptsOf and on-chain base64 JSON/SVG tokenURI. There are no administrative or upgrade entry points. This manifest does not set deployment policy or certify independent review, attestation, admission or deployment; policy and signed artifact linkage are handled separately by services.",
+    "token": {
+      "name": "Receipts",
+      "symbol": "RCPT",
+      "contract": "RCPT",
+      "decimals": 18
+    }
+  },
+  "contracts": [
+    {
+      "name": "RCPT",
+      "txHash": "0xc54ce477cba044beec278c7490cea70a0e08f869eeceee248e632ac336f94bc7",
+      "abiHash": "f36d2fe28b62f817a4fba0b78bb501b41895eada3982280273c063ad8183f577",
+      "address": "0x7603ee0f4346b9118c5474311196195d5ecb4c6e",
+      "blockNumber": 11791473,
+      "creationCodeHash": "e0c70e67dd07bb77275064365ccf117e1100377c0a669dd766e2cd254a3160ee"
+    },
+    {
+      "name": "SwapReceiptHook",
+      "txHash": "0xc54ce477cba044beec278c7490cea70a0e08f869eeceee248e632ac336f94bc7",
+      "abiHash": "83ae4889f064d952a051e414d1d6d13052e3234a5b4ced8c2eb0e73879d2e728",
+      "address": "0x652ca1b63287763b43706c515f8126042401c040",
+      "blockNumber": 11791473,
+      "creationCodeHash": "f95a0ab1f7cb012602901f913ef1228a054846bb19f69e9f7ca789c2292378d0"
+    }
+  ],
+  "sourceCommit": "51df4c55089f07ec549f8388c1f3d7a9aab5040e",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "902ecba16e16476a18ac2c6a9d9fc7e332559b075a3432cf95b343561beb91d5"
+}
